@@ -231,10 +231,10 @@ func (c *ClientConfig) validate() error {
 }
 
 // newAPI creates a new client.
-func newAPI(cfg *ClientConfig, options ...ClientOption) *Client {
+func newAPI(cfg *ClientConfig, ht *http.Client, options ...ClientOption) *Client {
 	client := &Client{
 		Config:     cfg,
-		httpClient: &http.Client{},
+		httpClient: ht,
 	}
 
 	for _, option := range options {
@@ -255,11 +255,17 @@ func GetAPI(options ...ClientOption) API {
 		return api
 	}
 
-	return newAPI(&cfg, options...)
+	return newAPI(&cfg, httpClient, options...)
 }
 
 var cfg ClientConfig
 
 func SetConfig(config ClientConfig) {
 	cfg = config
+}
+
+var httpClient *http.Client
+
+func WithClient(ht *http.Client) {
+	httpClient = ht
 }
