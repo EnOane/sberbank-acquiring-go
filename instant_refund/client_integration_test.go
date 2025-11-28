@@ -12,8 +12,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/helios-ag/sberbank-acquiring-go/instant_refund"
-	"github.com/helios-ag/sberbank-acquiring-go/schema"
+	"github.com/EnOane/sberbank-acquiring-go/instant_refund"
+	"github.com/EnOane/sberbank-acquiring-go/schema"
 	. "github.com/onsi/gomega"
 )
 

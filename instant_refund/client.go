@@ -7,9 +7,9 @@ import (
 	"strconv"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	acquiring "github.com/helios-ag/sberbank-acquiring-go"
-	"github.com/helios-ag/sberbank-acquiring-go/endpoints"
-	"github.com/helios-ag/sberbank-acquiring-go/schema"
+	acquiring "github.com/EnOane/sberbank-acquiring-go"
+	"github.com/EnOane/sberbank-acquiring-go/endpoints"
+	"github.com/EnOane/sberbank-acquiring-go/schema"
 )
 
 type Client struct {

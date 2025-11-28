@@ -1,4 +1,4 @@
-module github.com/helios-ag/sberbank-acquiring-go
+module github.com/EnOane/sberbank-acquiring-go
 
 go 1.24.5
 

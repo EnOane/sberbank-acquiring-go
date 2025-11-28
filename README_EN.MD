@@ -1,8 +1,8 @@
 [![LICENSE](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
-[![Go](https://github.com/helios-ag/sberbank-acquiring-go/actions/workflows/go.yml/badge.svg)](https://github.com/helios-ag/sberbank-acquiring-go/actions/workflows/go.yml)
+[![Go](https://github.com/EnOane/sberbank-acquiring-go/actions/workflows/go.yml/badge.svg)](https://github.com/EnOane/sberbank-acquiring-go/actions/workflows/go.yml)
 [![codecov](https://codecov.io/gh/helios-ag/sberbank-acquiring-go/graph/badge.svg?token=eCWqf8zkm3)](https://codecov.io/gh/helios-ag/sberbank-acquiring-go)
-[![Go Report Card](https://goreportcard.com/badge/github.com/helios-ag/sberbank-acquiring-go)](https://goreportcard.com/report/github.com/helios-ag/sberbank-acquiring-go)
-[![Godocs](https://img.shields.io/badge/golang-documentation-blue.svg)](https://godoc.org/github.com/helios-ag/sberbank-acquiring-go)
+[![Go Report Card](https://goreportcard.com/badge/github.com/EnOane/sberbank-acquiring-go)](https://goreportcard.com/report/github.com/EnOane/sberbank-acquiring-go)
+[![Godocs](https://img.shields.io/badge/golang-documentation-blue.svg)](https://godoc.org/github.com/EnOane/sberbank-acquiring-go)
 # Sberbank Acquiring API Wrapper
 
 [Sberbank Acquiring API](https://securepayments.sberbank.ru/wiki/doku.php/integration:api:start) Библиотека предоставляет удобную оболочку над REST‑интерфейсом Sberbank Acquiring.
@@ -36,15 +36,15 @@
 
 ``` sh
 go mod init
-go get -u github.com/helios-ag/sberbank-acquiring-go
+go get -u github.com/EnOane/sberbank-acquiring-go
 ```
 
 Импортируем зависимости
 
 ``` go
 import (
-	"github.com/helios-ag/sberbank-acquiring-go/acquiring"
-	"github.com/helios-ag/sberbank-acquiring-go/currency"
+	"github.com/EnOane/sberbank-acquiring-go/acquiring"
+	"github.com/EnOane/sberbank-acquiring-go/currency"
 )
 ```
 
@@ -55,9 +55,9 @@ import (
 	"context"
 	"fmt"
 
-	acquiring "github.com/helios-ag/sberbank-acquiring-go"
-	"github.com/helios-ag/sberbank-acquiring-go/currency"
-	"github.com/helios-ag/sberbank-acquiring-go/orders"
+	acquiring "github.com/EnOane/sberbank-acquiring-go"
+	"github.com/EnOane/sberbank-acquiring-go/currency"
+	"github.com/EnOane/sberbank-acquiring-go/orders"
 )
 
 func main() {

@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"testing"
 
-	acquiring "github.com/helios-ag/sberbank-acquiring-go"
-	"github.com/helios-ag/sberbank-acquiring-go/currency"
-	"github.com/helios-ag/sberbank-acquiring-go/endpoints"
-	"github.com/helios-ag/sberbank-acquiring-go/schema"
-	server "github.com/helios-ag/sberbank-acquiring-go/testing"
+	acquiring "github.com/EnOane/sberbank-acquiring-go"
+	"github.com/EnOane/sberbank-acquiring-go/currency"
+	"github.com/EnOane/sberbank-acquiring-go/endpoints"
+	"github.com/EnOane/sberbank-acquiring-go/schema"
+	server "github.com/EnOane/sberbank-acquiring-go/testing"
 	. "github.com/onsi/gomega"
 )
 

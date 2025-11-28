@@ -13,7 +13,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/helios-ag/sberbank-acquiring-go/schema"
+	"github.com/EnOane/sberbank-acquiring-go/schema"
 )
 
 // URLS for API endpoints

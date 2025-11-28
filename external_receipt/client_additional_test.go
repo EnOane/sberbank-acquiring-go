@@ -7,9 +7,9 @@ import (
     "net/http"
     "testing"
 
-    "github.com/helios-ag/sberbank-acquiring-go/endpoints"
-    "github.com/helios-ag/sberbank-acquiring-go/schema"
-    server "github.com/helios-ag/sberbank-acquiring-go/testing"
+    "github.com/EnOane/sberbank-acquiring-go/endpoints"
+    "github.com/EnOane/sberbank-acquiring-go/schema"
+    server "github.com/EnOane/sberbank-acquiring-go/testing"
     . "github.com/onsi/gomega"
 )
 

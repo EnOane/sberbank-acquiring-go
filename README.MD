@@ -1,8 +1,8 @@
 [![LICENSE](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
-[![Go](https://github.com/helios-ag/sberbank-acquiring-go/actions/workflows/go.yml/badge.svg)](https://github.com/helios-ag/sberbank-acquiring-go/actions/workflows/go.yml)
+[![Go](https://github.com/EnOane/sberbank-acquiring-go/actions/workflows/go.yml/badge.svg)](https://github.com/EnOane/sberbank-acquiring-go/actions/workflows/go.yml)
 [![codecov](https://codecov.io/gh/helios-ag/sberbank-acquiring-go/graph/badge.svg?token=eCWqf8zkm3)](https://codecov.io/gh/helios-ag/sberbank-acquiring-go)
-[![Go Report Card](https://goreportcard.com/badge/github.com/helios-ag/sberbank-acquiring-go)](https://goreportcard.com/report/github.com/helios-ag/sberbank-acquiring-go)
-[![Godocs](https://img.shields.io/badge/golang-documentation-blue.svg)](https://godoc.org/github.com/helios-ag/sberbank-acquiring-go)
+[![Go Report Card](https://goreportcard.com/badge/github.com/EnOane/sberbank-acquiring-go)](https://goreportcard.com/report/github.com/EnOane/sberbank-acquiring-go)
+[![Godocs](https://img.shields.io/badge/golang-documentation-blue.svg)](https://godoc.org/github.com/EnOane/sberbank-acquiring-go)
 # sberbank‑acquiring‑go
 
 Библиотека предоставляет удобную оболочку над [REST‑интерфейсом Sberbank Acquiring](https://securepayments.sberbank.ru/wiki/doku.php/integration:api:start).  
@@ -21,7 +21,7 @@
 ## Установка
 
 ```bash
-go get -u github.com/helios-ag/sberbank-acquiring-go
+go get -u github.com/EnOane/sberbank-acquiring-go
 ```
 
 Используйте **Go modules** (`go mod init`), чтобы зависимость подключалась автоматически.
@@ -35,9 +35,9 @@ import (
     "context"
     "fmt"
 
-    acquiring "github.com/helios-ag/sberbank-acquiring-go"
-    "github.com/helios-ag/sberbank-acquiring-go/currency"
-    "github.com/helios-ag/sberbank-acquiring-go/orders"
+    acquiring "github.com/EnOane/sberbank-acquiring-go"
+    "github.com/EnOane/sberbank-acquiring-go/currency"
+    "github.com/EnOane/sberbank-acquiring-go/orders"
 )
 
 func main() {
@@ -94,7 +94,7 @@ fmt.Println("Refund error:", refundResp.ErrorMessage)
 ## Привязка карт
 
 ```go
-import "github.com/helios-ag/sberbank-acquiring-go/bind"
+import "github.com/EnOane/sberbank-acquiring-go/bind"
 
 bindResp, _, err := bind.BindCard(context.Background(),
     bind.Binding{BindingID: "id123"})
@@ -117,7 +117,7 @@ fmt.Println("Bindings:", bindings.Binding)
 ## Запрос проверки вовлечённости карты в 3DS
 
 ```go
-import "github.com/helios-ag/sberbank-acquiring-go/enrollment"
+import "github.com/EnOane/sberbank-acquiring-go/enrollment"
 
 enrollResp, _, err := enrollment.VerifyEnrollment(context.Background(), "4111111111111111")
 if err != nil {
@@ -131,7 +131,7 @@ fmt.Println("Enrolled:", enrollResp.Enrolled)
 ### Apple Pay
 
 ```go
-import "github.com/helios-ag/sberbank-acquiring-go/mobile"
+import "github.com/EnOane/sberbank-acquiring-go/mobile"
 
 appleReq := mobile.ApplePaymentRequest{
     OrderNumber:  "order-002",
@@ -167,7 +167,7 @@ fmt.Println("GooglePay status:", googleResp.ErrorCode)
 ## Запрос возврата средств по устаревшему заказу сроком более двух лет
 
 ```go
-import "github.com/helios-ag/sberbank-acquiring-go/instant_refund"
+import "github.com/EnOane/sberbank-acquiring-go/instant_refund"
 
 req := instant_refund.InstantRefundRequest{
     UserName:    "user",
@@ -185,7 +185,7 @@ fmt.Println("Instant refund:", resp.ErrorCode)
 ## Запрос передачи данных чека
 
 ```go
-import "github.com/helios-ag/sberbank-acquiring-go/external_receipt"
+import "github.com/EnOane/sberbank-acquiring-go/external_receipt"
 
 receiptReq := external_receipt.ExternalReceiptRequest{
     UserName: "user",
@@ -203,7 +203,7 @@ fmt.Println("Receipt status:", receipt.Status)
 ## Запрос добавления карты в список SSL-карт
 
 ```go
-import "github.com/helios-ag/sberbank-acquiring-go/cardlist"
+import "github.com/EnOane/sberbank-acquiring-go/cardlist"
 
 resp, _, err := cardlist.UpdateSSLCardList(context.Background(), "mdOrder123", nil)
 if err != nil {
